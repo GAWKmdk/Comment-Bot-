@@ -1,0 +1,61 @@
+<head>
+    <title>Media Video ChatBot</title>
+</head>
+
+<body>
+    <header>
+        <div class="box-row">
+            <h1>Comment Box</h1>
+        </div>
+    </header>
+    <main>
+        {{> chat }}
+    </main>
+    <footer>
+        {{> form }}
+    </footer>
+</body>
+
+<!--
+----------------------------------------------------
+TEMPLATES
+----------------------------------------------------
+-->
+
+<template name="chat">
+    
+    <p>
+    <h2> A simple prototype to demonstrate how a comment section could be used with a moderator-themed chat bot to manage questions,comments and marketing opportunities inside the comment box itself.</h2>
+    </p> 
+    <hr>
+    {{#if messagesCount}}
+        <ul class="messages">
+            {{#each messages}}
+                <li>
+                    <div class="box-row">
+                        <i class="fa fa-user avatar"></i>
+                        <p class="user"><strong>{{name}}</strong> <span class="time">{{fromNow time}}</span></p>
+                        <p class="message" id="message">{{message}}</p>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <div class="hero">
+            {{#if isLoading}}
+                <p>Loading...</p>
+            {{else}}
+                <p>This comment board is still empty...<br>Be the first one to post a following!</p>
+            {{/if}}
+        </div>
+    {{/if}}
+</template>
+
+<template name="form">
+    <div class="box-row">
+        <form>
+            <input type="text" name="message" placeholder="Type a message here" autocomplete="off">
+            <i class="fa {{#if isLoading}}fa-circle-o-notch fa-spin{{else}}fa-arrow-circle-right{{/if}}"></i>
+        </form>
+    </div>
+</template>
