@@ -1,5 +1,8 @@
 A simple prototype demonstrating the capabilities of a simple chat bot implemented into a comment section of a video site frame.
 
+![commentbot1](https://cloud.githubusercontent.com/assets/23016977/21369221/d2a54f04-c6fd-11e6-9d11-d081e6e4a038.jpg)
+![commentbot2](https://cloud.githubusercontent.com/assets/23016977/21369222/d45301a2-c6fd-11e6-9605-34fa754f159d.jpg)
+
 What you can do ? 
 
 Comment.
